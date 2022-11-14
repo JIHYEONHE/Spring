@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script type="text/javascript" src="/resources/ckeditor/ckeditor.js"></script>
+<div class="card card-primary">
+	<div class="card-header">
+		<h3 class="card-title">${bodyDetail}</h3>
+	</div>
+
+
+	<form>
+		<div class="card-body">
+			<div class="form-group">
+				<label for="exampleInputEmail1">도서 아이디</label> <input
+					type="text" class="form-control" id="exampleInputEmail1" value="${bookVO.bookId}"
+					placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">제목</label> <input
+					type="text" class="form-control" id="exampleInputPassword1" value="${bookVO.title}"
+					placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">카테고리</label> <input
+					type="text" class="form-control" id="exampleInputPassword1" value="${bookVO.category}"
+					placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">가격</label> <input
+					type="text" class="form-control" id="exampleInputPassword1" value="${bookVO.price}"
+					placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">입고일</label> <input
+					type="text" class="form-control" id="exampleInputPassword1" value="${bookVO.insertDate}"
+					placeholder="Password">
+			</div>
+			<div class="form-group">
+            <label>내용 :</label>
+            <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
+            	<textarea id="content" name="content" class="form-control" rows="4" style="height: 124px;">${bookVO.content}</textarea>
+            </div>
+         </div>
+			
+		</div>
+
+		<div class="card-footer">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</form>
+</div>
